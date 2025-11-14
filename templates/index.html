@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ML Ops Assignment</title>
+</head>
+<body>
+  <h1>Welcome to MLOps Flask App</h1>
+  {% if prediction %}
+    <p>Prediction: {{ prediction }}</p>
+  {% endif %}
+  <form method="POST" enctype="multipart/form-data">
+    <input type="file" name="image" required>
+    <input type="submit" value="Predict">
+  </form>
+</body>
+</html>
