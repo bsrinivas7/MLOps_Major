@@ -18,7 +18,7 @@ param_grid = {
     'criterion': ['gini', 'entropy'],
 }
 
-grid_search = GridSearchCV(dt, param_grid, cv=5)
+grid_search = GridSearchCV(dt, param_grid, cv=10, refit=True)
 grid_search.fit(X_train, y_train)
 
 print(f"Best parameters: {grid_search.best_params_}")
